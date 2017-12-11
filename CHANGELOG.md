@@ -11,6 +11,7 @@ All notable changes to this project will be documented in this file.
 - Ensure that temp files are created in a temp directory (#423)
 - Added `WaitAllStrategy` as a mechanism for composing multiple startup `WaitStrategy` objects together
 - Changed `BrowserWebDriverContainer` to use improved wait strategies, to eliminate race conditions when starting VNC recording containers. This should lead to far fewer 'error' messages logged when starting up selenium containers, and less exposure to race related bugs (fixes #466). 
+- Add retry logic around checkExposedPort pre-flight check for improved robustness (fixes #513).
 
 ### Changed
 - Make Network instances reusable (i.e. work with `@ClassRule`) ([\#469](https://github.com/testcontainers/testcontainers-java/issues/469))
